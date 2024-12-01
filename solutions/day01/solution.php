@@ -14,7 +14,7 @@
   $leftArr = $rightArr = [];
 
   while($line = fgets($fh)) {
-    list($leftArr[],$rightArr[]) = explode("   ",$line);
+    list($leftArr[],$rightArr[]) = preg_split("/\h+/",$line);
   }
 
   sort($leftArr);
@@ -25,5 +25,5 @@
     $sum += abs($leftArr[$i] - $rightArr[$i]);
   }
 
-  print_r("Sum: ${sum}");
+  print_r("Sum: ${sum}\n");
 ?>
