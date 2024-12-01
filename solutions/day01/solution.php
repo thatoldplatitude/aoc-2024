@@ -14,6 +14,7 @@
   $leftArr = $rightArr = [];
 
   while($line = fgets($fh)) {
+    $line = trim($line);
     list($leftArr[],$rightArr[]) = preg_split("/\h+/",$line);
   }
 
