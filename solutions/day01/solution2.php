@@ -22,8 +22,6 @@
     $rightArr[$rightKey] = ++$rightVal;
   }
 
-  sort($leftArr);
-
   $sum = 0;
   for ($i=0; $i < count($leftArr); $i++) { 
     $lval = $leftArr[$i];
